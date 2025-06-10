@@ -53,13 +53,13 @@ $ git config --global user.name ${GITHUB_USERNAME}
 $ git config --global user.email ${GITHUB_EMAIL}
 $ git config -e --global
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab02.git
-$ git pull origin master
+$ git pull origin main
 $ touch README.md
 $ git status
 ```
 
 ```sh
-On branch master
+On branch main
 
 No commits yet
 
@@ -76,13 +76,13 @@ $ git commit -m"added README.md"
 ```
 
 ```sh
-[master (root-commit) 1d08838] added README.md
+[main (root-commit) 1d08838] added README.md
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.m
 ```
 
 ```sh
-$ git push origin master
+$ git push origin main
 ```
 
 ```sh
@@ -93,11 +93,11 @@ Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 remote: 
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/Software9-1/lab02/pull/new/master
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/Software9-1/lab02/pull/new/main
 remote: 
 To https://github.com/Software9-1/lab02.git
- * [new branch]      master -> master
+ * [new branch]      main -> main
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab02** файл **.gitignore**
@@ -111,12 +111,12 @@ To https://github.com/Software9-1/lab02.git
 ```
 
 ```sh
-$ git pull origin master
+$ git pull origin main
 ```
 
 ```sh
 From https://github.com/Software9-1/lab02
- * branch            master     -> FETCH_HEAD
+ * branch            main     -> FETCH_HEAD
 Already up to date.
 ```
 
@@ -125,7 +125,7 @@ $ git log
 ```
 
 ```sh
-commit 1d08838d395b50e7825a9733d5d1fdbe3d3bd4d5 (HEAD -> master, origin/master)
+commit 1d08838d395b50e7825a9733d5d1fdbe3d3bd4d5 (HEAD -> main, origin/main)
 Author: Software9-1 <dds2508@gmail.com>
 Date:   Sat May 17 18:48:37 2025 +0300
 
@@ -196,7 +196,7 @@ $ git status
 ```
 
 ```sh
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	examples/
@@ -212,7 +212,7 @@ $ git commit -m"added sources"
 ```
 
 ```sh
-[master 41a6a46] added sources
+[main 41a6a46] added sources
  4 files changed, 32 insertions(+)
  create mode 100644 examples/example1.cpp
  create mode 100644 examples/example2.cpp
@@ -221,7 +221,7 @@ $ git commit -m"added sources"
 ```
 
 ```sh
-$ git push origin master
+$ git push origin main
 ```
 
 ```sh
@@ -234,7 +234,7 @@ Compressing objects: 100% (7/7), done.
 Writing objects: 100% (9/9), 896 bytes | 896.00 KiB/s, done.
 Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/Software9-1/lab02.git
-   1d08838..41a6a46  master -> master
+   1d08838..41a6a46  main -> main
 ```
 
 ## Report
@@ -284,13 +284,13 @@ $ gist REPORT.md
 2. Внесите изменения в ветке `patch1` по исправлению кода и избавления от `using namespace std;`.
 3. **commit**, **push** локальную ветку в удалённый репозиторий.
 4. Проверьте, что ветка `patch1` доступна в удалёный репозитории.
-5. Создайте pull-request `patch1 -> master`.
+5. Создайте pull-request `patch1 -> main`.
 6. В локальной копии в ветке `patch1` добавьте в исходный код комментарии.
 7. **commit**, **push**.
 8. Проверьте, что новые изменения есть в созданном на **шаге 5** pull-request
-9. В удалённый репозитории выполните  слияние PR `patch1 -> master` и удалите ветку `patch1` в удаленном репозитории.
+9. В удалённый репозитории выполните  слияние PR `patch1 -> main` и удалите ветку `patch1` в удаленном репозитории.
 10. Локально выполните **pull**.
-11. С помощью команды **git log** просмотрите историю в локальной версии ветки `master`.
+11. С помощью команды **git log** просмотрите историю в локальной версии ветки `main`.
 12. Удалите локальную ветку `patch1`.
 
 ### Part III
@@ -298,13 +298,13 @@ $ gist REPORT.md
 **Note:** *Работать продолжайте с теми же репоззиториями, что и в первой части задания.*
 1. Создайте новую локальную ветку `patch2`.
 2. Измените *code style* с помощью утилиты [**clang-format**](http://clang.llvm.org/docs/ClangFormat.html). Например, используя опцию `-style=Mozilla`.
-3. **commit**, **push**, создайте pull-request `patch2 -> master`.
-4. В ветке **master** в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
+3. **commit**, **push**, создайте pull-request `patch2 -> main`.
+4. В ветке **main** в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
 5. Убедитесь, что в pull-request появились *конфликтны*.
 6. Для этого локально выполните **pull** + **rebase** (точную последовательность команд, следует узнать самостоятельно). **Исправьте конфликты**.
 7. Сделайте *force push* в ветку `patch2`
 8. Убедитель, что в pull-request пропали конфликтны. 
-9. Вмержите pull-request `patch2 -> master`.
+9. Вмержите pull-request `patch2 -> main`.
 
 ## Links
 
